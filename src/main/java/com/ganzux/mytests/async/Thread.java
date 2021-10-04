@@ -6,20 +6,12 @@ public class Thread {
         int number = 20;
 
         java.lang.Thread thread = new java.lang.Thread(() -> {
-            System.out.println("Factorial of " + number + " is " + factorial(number));
+            System.out.println("Factorial of " + number + " is " + MyMath.factorial(number));
         });
 
         thread.start();
 
         System.out.println("End.");
-    }
-
-    protected static long factorial(int numer) {
-        if (numer < 3) {
-            return  numer;
-        }
-
-        return numer * factorial(numer - 1);
     }
 
 }
